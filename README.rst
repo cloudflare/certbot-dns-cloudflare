@@ -1,1 +1,1 @@
-certbot/README.rst
+Cloudflare DNS Authenticator plugin for Certbot
