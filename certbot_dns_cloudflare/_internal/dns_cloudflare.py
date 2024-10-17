@@ -25,7 +25,9 @@ class Authenticator(dns_common.DNSAuthenticator):
 
     description = ('Obtain certificates using a DNS TXT record (if you are using Cloudflare for '
                    'DNS).')
-    ttl = 120
+    # To Cloudflare this means automatic
+    # Reference: https://api.cloudflare.com/#dns-records-for-a-zone-create-dns-record
+    ttl = 1
 
     def __init__(self, *args: Any, **kwargs: Any) -> None:
         super().__init__(*args, **kwargs)
